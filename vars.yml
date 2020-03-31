@@ -1,8 +1,8 @@
 ---
 accounts:
-  - user_name: user_a
+  - user: user_a
     password: "{{ vault_user_a_pass }}"
     shell: /usr/bin/bash
-  - user_name: user_b
+  - user: user_b
     password: "{{ vault_user_b_pass }}"
     shell: /usr/bin/nologin

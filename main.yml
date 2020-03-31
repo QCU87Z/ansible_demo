@@ -8,7 +8,7 @@
   tasks:
     - name: Create users
       user:
-        name: "{{ item.name }}"
+        name: "{{ item.user }}"
         state: present
         shell: "{{ item.shell }}"
         password: "{{ item.password }}"
