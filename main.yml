@@ -1,0 +1,15 @@
+---
+- name: Users
+  hosts: all
+  vars_files:
+    - vault.yml
+    - vars.yml
+
+  tasks:
+    - name: Create users
+      user:
+        name: "{{ item.name }}"
+        state: present
+        shell: "{{ item.shell }}"
+        password: "{{ item.password }}"
+      with_items: "{{ accounts }}"
